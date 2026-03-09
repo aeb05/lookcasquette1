@@ -1,6 +1,6 @@
-CREATE DATABASE IF NOT EXISTS lookcasquette CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+CREATE DATABASE IF NOT EXISTS look_casq-353131393d99 CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 
-USE lookcasquette;
+USE look_casq-353131393d99;
 
 CREATE TABLE IF NOT EXISTS products (
     id VARCHAR(36) PRIMARY KEY,

@@ -9,7 +9,7 @@ class Database {
     public function __construct() {
         // Railway MySQL environment variables
         $this->host = getenv('MYSQL_HOST') ?: 'localhost';
-        $this->db_name = getenv('MYSQL_DATABASE') ?: 'lookcasquette';
+        $this->db_name = getenv('MYSQL_DATABASE') ?: 'look_casq-353131393d99';
         $this->username = getenv('MYSQL_USER') ?: 'root';
         $this->password = getenv('MYSQL_PASSWORD') ?: '';
     }
