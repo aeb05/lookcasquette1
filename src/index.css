@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 4%;
+    --foreground: 40 20% 92%;
+
+    --card: 0 0% 7%;
+    --card-foreground: 40 20% 92%;
+
+    --popover: 0 0% 7%;
+    --popover-foreground: 40 20% 92%;
+
+    --primary: 42 100% 50%;
+    --primary-foreground: 0 0% 4%;
+
+    --secondary: 0 0% 11%;
+    --secondary-foreground: 40 20% 85%;
+
+    --muted: 0 0% 10%;
+    --muted-foreground: 0 0% 50%;
+
+    --accent: 42 100% 50%;
+    --accent-foreground: 0 0% 4%;
+
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 0 0% 14%;
+    --input: 0 0% 14%;
+    --ring: 42 100% 50%;
+
+    --radius: 0.5rem;
+
+    --primary-glow: 42 100% 60%;
+
+    --sidebar-background: 0 0% 4%;
+    --sidebar-foreground: 40 20% 92%;
+    --sidebar-primary: 42 100% 50%;
+    --sidebar-primary-foreground: 0 0% 4%;
+    --sidebar-accent: 0 0% 11%;
+    --sidebar-accent-foreground: 40 20% 92%;
+    --sidebar-border: 0 0% 14%;
+    --sidebar-ring: 42 100% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-body antialiased;
+  }
+
+  ::selection {
+    background: hsl(42 100% 50% / 0.3);
+    color: hsl(40 20% 92%);
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(135deg, hsl(42 100% 50%), hsl(42 100% 65%));
+  }
+
+  .glow-primary {
+    box-shadow: 0 0 40px -10px hsl(42 100% 50% / 0.4);
+  }
+
+  .line-reveal {
+    position: relative;
+  }
+  .line-reveal::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: hsl(42 100% 50%);
+    transition: width 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+  .line-reveal:hover::after {
+    width: 100%;
+  }
+}

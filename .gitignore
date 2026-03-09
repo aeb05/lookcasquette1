@@ -1,0 +1,38 @@
+# Dependencies
+node_modules/
+backend/vendor/
+
+# Build outputs
+dist/
+build/
+
+# Environment files
+.env
+.env.local
+.env.production
+
+# Logs
+*.log
+npm-debug.log*
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Uploads (for local dev)
+backend/uploads/products/*
+!backend/uploads/products/.gitkeep
+
+# Lock files (keep package-lock.json, ignore others)
+bun.lockb
+yarn.lock
+
+# Supabase (no longer used)
+supabase/
+src/integrations/supabase/

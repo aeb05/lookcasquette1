@@ -1,0 +1,8 @@
+RewriteEngine On
+RewriteBase /
+
+# Serve uploads directly
+RewriteRule ^uploads/(.*)$ uploads/$1 [L]
+
+# Route API requests
+RewriteRule ^api/(.*)$ api/$1 [L]
